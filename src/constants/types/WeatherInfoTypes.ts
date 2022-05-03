@@ -5,7 +5,7 @@ interface WeatherInfoTypes {
   weather: { id: number; main: string; description: string; icon: string }[];
   country: string;
   name: string;
-  dateTime: string;
+  dateTime: Date;
 }
 
 export type { WeatherInfoTypes };

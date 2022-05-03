@@ -1,2 +1,3 @@
-export * from "./WeatherInfo";
-export * from "./WeatherSearch";
+export * from "./WeatherInfoTypes";
+export * from "./WeatherSearchTypes";
+export * from "./SearchHistoryTypes";

@@ -1,18 +1,20 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import axios from "axios";
 
 //custom types
 import { WeatherInfoTypes, WeatherSearchTypes } from "../constants/types";
-import moment from "moment";
 
-type GetWeatherFuncType = (criteria: WeatherSearchTypes) => void;
+type GetWeatherFuncType = (
+  criteria: WeatherSearchTypes,
+  callback?: (weatherInfo: WeatherInfoTypes) => void
+) => void;
 
 export const useWeatherInfo = () => {
   const [weatherInfo, setWeatherInfo] = useState<WeatherInfoTypes>();
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
 
-  const getWeatherInfo: GetWeatherFuncType = async (criteria) => {
+  const getWeatherInfo: GetWeatherFuncType = async (criteria, callback) => {
     //toggle loading spinner
     setIsLoading(true);
     try {
@@ -26,26 +28,35 @@ export const useWeatherInfo = () => {
 
         //get weather info using geolocation
         const info = await axios.get(
-          `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${process.env.REACT_APP_WEATHER_API_KEY}`
+          `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${process.env.REACT_APP_WEATHER_API_KEY}`
         );
 
+        //format data
         if (info.data) {
           const {
             main: { temp_max, temp_min, humidity },
             weather,
             sys: { country },
+            dt,
+            timezone,
           } = info.data;
 
-          setWeatherInfo({
+          const newWeatherInfo = {
             temp_max,
             temp_min,
             humidity,
             weather,
             country,
             name,
-            dateTime: moment().format("YYYY-MM-DD hh:mm A"),
-          });
+            dateTime: new Date(dt * 1000 + timezone * 1000),
+          };
+
+          setWeatherInfo(newWeatherInfo);
+
+          //return promise to callback function
+          if (callback) callback(newWeatherInfo);
         }
+        setError("");
       } else {
         setError("Not found");
       }
@@ -58,5 +69,10 @@ export const useWeatherInfo = () => {
     }
   };
 
-  return [weatherInfo, error, isLoading, getWeatherInfo] as const;
+  return [
+    weatherInfo,
+    error,
+    isLoading,
+    useCallback(getWeatherInfo, []),
+  ] as const;
 };

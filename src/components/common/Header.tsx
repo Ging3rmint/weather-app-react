@@ -2,27 +2,34 @@ import styled from "styled-components";
 
 interface PropTypes {
   title?: string;
+  style?: {
+    [propName: string]: any;
+  };
 }
 
 const StyledHeader = styled.div`
-  padding: 10px;
-  position: relative;
+  padding: 10px 0;
 
-  &:before {
-    content: "";
-    height: 1px;
-    left: 10px;
-    right: 10px;
-    bottom: 0;
-    position: absolute;
-    background-color: black;
+  .container {
+    position: relative;
+    &:before {
+      content: "";
+      height: 1px;
+      left: 10px;
+      right: 10px;
+      bottom: -10px;
+      position: absolute;
+      background-color: black;
+    }
   }
 `;
 
-const Header: React.FC<PropTypes> = ({ title }) => {
+const Header: React.FC<PropTypes> = ({ title, style }) => {
   return (
-    <StyledHeader className='container'>
-      <h1>{title}</h1>
+    <StyledHeader style={style}>
+      <div className='container'>
+        <h1>{title}</h1>
+      </div>
     </StyledHeader>
   );
 };

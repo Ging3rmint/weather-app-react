@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 
 interface PropTypes {
@@ -13,17 +14,19 @@ const StyledInputWrapper = styled.div`
   }
 
   > input {
-    padding: 2px 5px;
+    padding: 2px;
   }
 `;
 
-const InputField: React.FC<PropTypes> = ({ label, id, ...prop }) => {
-  return (
-    <StyledInputWrapper>
-      <label htmlFor={id}>{label}:</label>
-      <input name={id} {...prop} />
-    </StyledInputWrapper>
-  );
-};
+const InputField = React.forwardRef<HTMLInputElement, PropTypes>(
+  ({ label, id, ...prop }, ref) => {
+    return (
+      <StyledInputWrapper>
+        <label htmlFor={id}>{label}:</label>
+        <input ref={ref} name={id} {...prop} />
+      </StyledInputWrapper>
+    );
+  }
+);
 
 export default InputField;
