@@ -1,0 +1,393 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?j4qoih');
+  src:  url('fonts/icomoon.eot?j4qoih#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?j4qoih') format('truetype'),
+    url('fonts/icomoon.woff?j4qoih') format('woff'),
+    url('fonts/icomoon.svg?j4qoih#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-compass:before {
+  content: "\e900";
+}
+.icon-location:before {
+  content: "\e900";
+}
+.icon-map:before {
+  content: "\e900";
+}
+.icon-Fahrenheit:before {
+  content: "\e901";
+}
+.icon-temperature:before {
+  content: "\e901";
+}
+.icon-Celsius:before {
+  content: "\e902";
+}
+.icon-temperature1:before {
+  content: "\e902";
+}
+.icon-thermometer:before {
+  content: "\e903";
+}
+.icon-temperature2:before {
+  content: "\e903";
+}
+.icon-lightning:before {
+  content: "\e904";
+}
+.icon-clouds:before {
+  content: "\e904";
+}
+.icon-weather:before {
+  content: "\e904";
+}
+.icon-cloudy:before {
+  content: "\e905";
+}
+.icon-weather1:before {
+  content: "\e905";
+}
+.icon-clouds1:before {
+  content: "\e905";
+}
+.icon-weather2:before {
+  content: "\e906";
+}
+.icon-cloud:before {
+  content: "\e906";
+}
+.icon-snowy:before {
+  content: "\e907";
+}
+.icon-cloud1:before {
+  content: "\e907";
+}
+.icon-weather3:before {
+  content: "\e907";
+}
+.icon-snowy1:before {
+  content: "\e908";
+}
+.icon-cloud2:before {
+  content: "\e908";
+}
+.icon-weather4:before {
+  content: "\e908";
+}
+.icon-windy:before {
+  content: "\e909";
+}
+.icon-rainy:before {
+  content: "\e909";
+}
+.icon-weather5:before {
+  content: "\e909";
+}
+.icon-cloud3:before {
+  content: "\e909";
+}
+.icon-windy1:before {
+  content: "\e90a";
+}
+.icon-cloud4:before {
+  content: "\e90a";
+}
+.icon-weather6:before {
+  content: "\e90a";
+}
+.icon-rainy1:before {
+  content: "\e90b";
+}
+.icon-cloud5:before {
+  content: "\e90b";
+}
+.icon-weather7:before {
+  content: "\e90b";
+}
+.icon-rainy2:before {
+  content: "\e90c";
+}
+.icon-cloud6:before {
+  content: "\e90c";
+}
+.icon-weather8:before {
+  content: "\e90c";
+}
+.icon-lightning1:before {
+  content: "\e90d";
+}
+.icon-weather9:before {
+  content: "\e90d";
+}
+.icon-cloud7:before {
+  content: "\e90e";
+}
+.icon-weather10:before {
+  content: "\e90e";
+}
+.icon-cloud8:before {
+  content: "\e90f";
+}
+.icon-night:before {
+  content: "\e90f";
+}
+.icon-weather11:before {
+  content: "\e90f";
+}
+.icon-cloudy1:before {
+  content: "\e910";
+}
+.icon-weather12:before {
+  content: "\e910";
+}
+.icon-moon:before {
+  content: "\e911";
+}
+.icon-night1:before {
+  content: "\e911";
+}
+.icon-weather13:before {
+  content: "\e911";
+}
+.icon-sun:before {
+  content: "\e912";
+}
+.icon-weather14:before {
+  content: "\e912";
+}
+.icon-lightning2:before {
+  content: "\e913";
+}
+.icon-clouds2:before {
+  content: "\e913";
+}
+.icon-weather15:before {
+  content: "\e913";
+}
+.icon-cloud9:before {
+  content: "\e914";
+}
+.icon-lightning3:before {
+  content: "\e914";
+}
+.icon-weather16:before {
+  content: "\e914";
+}
+.icon-cloudy2:before {
+  content: "\e915";
+}
+.icon-weather17:before {
+  content: "\e915";
+}
+.icon-clouds3:before {
+  content: "\e915";
+}
+.icon-weather18:before {
+  content: "\e916";
+}
+.icon-cloud10:before {
+  content: "\e916";
+}
+.icon-snowy2:before {
+  content: "\e917";
+}
+.icon-weather19:before {
+  content: "\e917";
+}
+.icon-cloud11:before {
+  content: "\e917";
+}
+.icon-snowy3:before {
+  content: "\e918";
+}
+.icon-weather20:before {
+  content: "\e918";
+}
+.icon-cloud12:before {
+  content: "\e918";
+}
+.icon-snowy4:before {
+  content: "\e919";
+}
+.icon-weather21:before {
+  content: "\e919";
+}
+.icon-cloud13:before {
+  content: "\e919";
+}
+.icon-windy2:before {
+  content: "\e91a";
+}
+.icon-rainy3:before {
+  content: "\e91a";
+}
+.icon-weather22:before {
+  content: "\e91a";
+}
+.icon-cloud14:before {
+  content: "\e91a";
+}
+.icon-windy3:before {
+  content: "\e91b";
+}
+.icon-weather23:before {
+  content: "\e91b";
+}
+.icon-cloud15:before {
+  content: "\e91b";
+}
+.icon-rainy4:before {
+  content: "\e91c";
+}
+.icon-weather24:before {
+  content: "\e91c";
+}
+.icon-cloud16:before {
+  content: "\e91c";
+}
+.icon-rainy5:before {
+  content: "\e91d";
+}
+.icon-weather25:before {
+  content: "\e91d";
+}
+.icon-cloud17:before {
+  content: "\e91d";
+}
+.icon-lightning4:before {
+  content: "\e91e";
+}
+.icon-weather26:before {
+  content: "\e91e";
+}
+.icon-cloud18:before {
+  content: "\e91e";
+}
+.icon-lightning5:before {
+  content: "\e91f";
+}
+.icon-weather27:before {
+  content: "\e91f";
+}
+.icon-cloud19:before {
+  content: "\e91f";
+}
+.icon-cloud20:before {
+  content: "\e920";
+}
+.icon-weather28:before {
+  content: "\e920";
+}
+.icon-lines:before {
+  content: "\e921";
+}
+.icon-list:before {
+  content: "\e921";
+}
+.icon-weather29:before {
+  content: "\e921";
+}
+.icon-weather30:before {
+  content: "\e922";
+}
+.icon-cloud21:before {
+  content: "\e922";
+}
+.icon-weather31:before {
+  content: "\e923";
+}
+.icon-weather32:before {
+  content: "\e924";
+}
+.icon-cloud22:before {
+  content: "\e925";
+}
+.icon-night2:before {
+  content: "\e925";
+}
+.icon-weather33:before {
+  content: "\e925";
+}
+.icon-cloudy3:before {
+  content: "\e926";
+}
+.icon-weather34:before {
+  content: "\e926";
+}
+.icon-snowflake:before {
+  content: "\e927";
+}
+.icon-gear:before {
+  content: "\e927";
+}
+.icon-weather35:before {
+  content: "\e927";
+}
+.icon-wind:before {
+  content: "\e928";
+}
+.icon-weather36:before {
+  content: "\e928";
+}
+.icon-windy4:before {
+  content: "\e929";
+}
+.icon-weather37:before {
+  content: "\e929";
+}
+.icon-sun1:before {
+  content: "\e92a";
+}
+.icon-weather38:before {
+  content: "\e92a";
+}
+.icon-moon1:before {
+  content: "\e92b";
+}
+.icon-night3:before {
+  content: "\e92b";
+}
+.icon-weather39:before {
+  content: "\e92b";
+}
+.icon-sun2:before {
+  content: "\e92c";
+}
+.icon-weather40:before {
+  content: "\e92c";
+}
+.icon-sunrise:before {
+  content: "\e92d";
+}
+.icon-dawn:before {
+  content: "\e92d";
+}
+.icon-weather41:before {
+  content: "\e92d";
+}
+.icon-trash-2:before {
+  content: "\e92e";
+}
+.icon-search:before {
+  content: "\e92f";
+}
