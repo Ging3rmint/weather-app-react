@@ -17,6 +17,11 @@ export const useWeatherInfo = () => {
   const getWeatherInfo: GetWeatherFuncType = async (criteria, callback) => {
     //toggle loading spinner
     setIsLoading(true);
+    if (!criteria.city) {
+      setError("Please enter a city name");
+      return;
+    }
+
     try {
       //get geolocation of city and country
       const geoLocate = await axios.get(

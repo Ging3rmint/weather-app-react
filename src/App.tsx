@@ -10,6 +10,7 @@ import { useWeatherInfo } from "./hooks";
 //common
 import Header from "./components/common/Header";
 // import Spinner from "./components/common/Spinner";
+import ErrorText from "./components/common/ErrorText";
 
 //molecules
 import WeatherSearchBar from "./components/molecules/WeatherSearchBar";
@@ -17,7 +18,6 @@ import WeatherInfo from "./components/molecules/WeatherInfo";
 
 //organisms
 import SearchHistoryList from "./components/organisms/SearchHistoryList";
-import ErrorText from "./components/atoms/ErrorText";
 
 const App = () => {
   const [searchHistory, setSearchHistory] = useState<SearchHistoryTypes[]>([]);
@@ -51,22 +51,19 @@ const App = () => {
 
   //initiate get weather request
   const onWeatherSearchSubmit = () => {
-    if (weatherSearchValues.city !== "") {
-      getWeatherInfo(weatherSearchValues, (info) => {
-        const id = `searchHistory${
-          searchHistory.length
-        }${new Date().getTime()}`;
-        const historyObj = {
-          state: info.name,
-          country: info.country,
-          id,
-          time: moment().format("hh:mm:ss A"),
-        };
+    //callback function for search history
+    getWeatherInfo(weatherSearchValues, (info) => {
+      const id = `searchHistory${searchHistory.length}${new Date().getTime()}`;
+      const historyObj = {
+        state: info.name,
+        country: info.country,
+        id,
+        time: moment().format("hh:mm:ss A"),
+      };
 
-        const newSearchHistory = [...searchHistory, { ...historyObj }];
-        setSearchHistory(newSearchHistory);
-      });
-    }
+      const newSearchHistory = [...searchHistory, { ...historyObj }];
+      setSearchHistory(newSearchHistory);
+    });
   };
 
   const onHistoryClickSearch = (id: string) => {
